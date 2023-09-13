@@ -1,17 +1,17 @@
 package ru.netology.javaql.services;
 
 public class RestService {
-    public int calculate (int income, int expenses, int threshold){
+    public int calculate(int income, int expenses, int threshold) {
         int count = 0; // счетчик месяцев отдыха
         int money = 0; // количество денег на счету
-        for (int month = 0; month < 12; month++){
+        for (int month = 0; month < 12; month++) {
             if (money >= threshold) { // можем ли отдыхать?
                 count++; // увеличиваем счётчик месяцев отдыха
                 money = (money - expenses) / 3;
-            }else {
+            } else {
                 money = money + income - expenses;
             }
         }
-    return count;
+        return count;
     }
 }
